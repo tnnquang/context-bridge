@@ -1,0 +1,30 @@
+{
+  "name": "context-bridge",
+  "version": "1.0.0",
+  "description": "A connector to get data from Server Component and use it in Client Component instead of React Context",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "react",
+    "server-components",
+    "client-components",
+    "data-bridge",
+    "context"
+  ],
+  "author": "",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "typescript": "^5.0.0"
+  }
+}
