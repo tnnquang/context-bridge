@@ -13,11 +13,11 @@ A lightweight library to bridge data from React Server Components to Client Comp
 ## Installation
 
 ```bash
-npm install context-bridge
+npm install @tnnquang/context-bridge
 # or
-pnpm add context-bridge
+pnpm add @tnnquang/context-bridge
 # or
-yarn add context-bridge
+yarn add @tnnquang/context-bridge
 ```
 
 ## Peer Dependencies
@@ -31,8 +31,8 @@ yarn add context-bridge
 Create a file to define your bridge (e.g., `lib/user-bridge.ts`):
 
 ```typescript
-import { createBridgeProvider } from 'context-bridge/server';
-import { createBridgeHook } from 'context-bridge/client';
+import { createBridgeProvider } from '@tnnquang/context-bridge/server';
+import { createBridgeHook } from '@tnnquang/context-bridge/client';
 
 type User = {
   id: string;
@@ -56,7 +56,7 @@ export const useUser = createBridgeHook<User>('user', {
 In your root layout (e.g., `app/layout.tsx`), add the `BridgeSerializer` component at the end of the `<body>` tag:
 
 ```typescript
-import { BridgeSerializer } from 'context-bridge/server';
+import { BridgeSerializer } from '@tnnquang/context-bridge/server';
 
 export default function RootLayout({
   children,
@@ -124,8 +124,8 @@ You can create multiple bridges for different data types:
 
 ```typescript
 // lib/bridges.ts
-import { createBridgeProvider } from 'context-bridge/server';
-import { createBridgeHook } from 'context-bridge/client';
+import { createBridgeProvider } from '@tnnquang/context-bridge/server';
+import { createBridgeHook } from '@tnnquang/context-bridge/client';
 
 // User bridge
 type User = { id: string; name: string };
@@ -222,7 +222,7 @@ A component that serializes all bridge data into a script tag.
 
 **Usage:**
 ```typescript
-import { BridgeSerializer } from 'context-bridge/server';
+import { BridgeSerializer } from '@tnnquang/context-bridge/server';
 
 // Place at the end of <body> in root layout
 <body>
@@ -447,8 +447,8 @@ Complete example with authentication:
 
 ```typescript
 // lib/auth-bridge.ts
-import { createBridgeProvider } from 'context-bridge/server';
-import { createBridgeHook } from 'context-bridge/client';
+import { createBridgeProvider } from '@tnnquang/context-bridge/server';
+import { createBridgeHook } from '@tnnquang/context-bridge/client';
 
 type AuthUser = {
   id: string;
@@ -461,7 +461,7 @@ export const AuthProvider = createBridgeProvider<AuthUser>('auth');
 export const useAuth = createBridgeHook<AuthUser>('auth', null);
 
 // app/layout.tsx
-import { BridgeSerializer } from 'context-bridge/server';
+import { BridgeSerializer } from '@tnnquang/context-bridge/server';
 
 export default function RootLayout({ children }) {
   return (
