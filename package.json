@@ -1,7 +1,7 @@
 {
   "name": "context-bridge",
   "version": "1.0.0",
-  "description": "A connector to get data from Server Component and use it in Client Component instead of React Context",
+  "description": "A connector to get data from a Server Component and use it in a Client Component instead of React Context",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
