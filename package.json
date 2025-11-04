@@ -46,7 +46,9 @@
     "bridge",
     "connector",
     "bridge",
-    "data"
+    "data",
+    "app router",
+    "context"
   ],
   "author": "Tran Ngoc Nhat Quang",
   "license": "MIT",

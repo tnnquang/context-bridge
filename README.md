@@ -22,7 +22,7 @@ yarn add @tnnquang/context-bridge
 
 ## Peer Dependencies
 
-- React 19.0.0 or higher
+- React 18.0.0 or higher
 
 ## Quick Start
 
